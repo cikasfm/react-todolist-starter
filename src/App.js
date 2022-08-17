@@ -1,11 +1,12 @@
 import Requirements from "./Requirements";
 import "./styles.css";
-import { getTasks, addTask, removeTask, setTasks } from "./todo.service";
+import TodoList from "./TodoList";
 
 export default function App() {
   return (
     <div className="App">
       <Requirements />
+      <TodoList />
     </div>
   );
 }

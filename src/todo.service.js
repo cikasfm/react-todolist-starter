@@ -29,7 +29,7 @@ const randomDelay = () => delay(random());
  *
  * @returns {Promise} todoList array wrapped in a Promise
  */
-module.exports.getTasks = async () => randomDelay().then(() => getList());
+export const getTasks = async () => randomDelay().then(() => getList());
 
 /**
  * <p>Sets a list of tasks to the Local Storage</p>
@@ -37,7 +37,7 @@ module.exports.getTasks = async () => randomDelay().then(() => getList());
  * @param {Array} newList a list of tasks
  * @returns {Promise} todoList array wrapped in a Promise
  */
-module.exports.setTasks = async (newList = []) =>
+export const setTasks = async (newList = []) =>
   randomDelay()
     .then(() => setList([...newList]))
     .then(() => getList());
@@ -48,7 +48,7 @@ module.exports.setTasks = async (newList = []) =>
  * @param {string} task a new task to add to the list
  * @returns {Promise} todoList array wrapped in a Promise
  */
-module.exports.addTask = async (task) =>
+export const addTask = async (task) =>
   randomDelay()
     .then(() => setList([...getList(), task]))
     .then(() => getList());
@@ -59,7 +59,7 @@ module.exports.addTask = async (task) =>
  * @param {string} task a task to remove
  * @returns {Promise} todoList array wrapped in a Promise
  */
-module.exports.removeTask = async (task) =>
+export const removeTask = async (task) =>
   randomDelay()
     .then(() => {
       let list = getList();
