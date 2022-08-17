@@ -1,5 +1,5 @@
-import Requirements from "./Requirements";
 import "./styles.css";
+import Requirements from "./Requirements";
 import TodoList from "./TodoList";
 
 export default function App() {
