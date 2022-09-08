@@ -2,8 +2,6 @@ import React, { Component } from "react";
 /**
  * props:
  *    onToggle(state object) func - A callback after the component is toggled.
- *    label string - The label for the Dropdown
- *    children object - The content that needs to be shown or hidden
  */
 export default class Requirements extends Component {
   state = {
@@ -25,22 +23,22 @@ export default class Requirements extends Component {
   render() {
     const { show } = this.state;
     return (
-      <div class="container">
-        <div class="p-5 mb-4 mt-4 bg-light rounded-3">
-          <div class="container-fluid">
-            <h1 class="display-5 fw-bold">Coding exercise</h1>
-            <p class="col-md-8 fs-4">
+      <div className="container">
+        <div className="p-5 mb-4 mt-4 bg-light rounded-3">
+          <div className="container-fluid">
+            <h1 className="display-5 fw-bold">Coding exercise</h1>
+            <p className="col-md-8 fs-4">
               The goal of this task is to implement a Simple Todo List
             </p>
             <button
-              class="btn btn-primary btn-lg"
-              type="button"
-              onClick={this.toggle}
+                className="btn btn-primary btn-lg"
+                type="button"
+                onClick={this.toggle}
             >
               Requirements
             </button>
             {show ? (
-              <div id="requirements" class="mt-4">
+              <div id="requirements" className="mt-4">
                 <h2>Requirements</h2>
                 <p>
                     The goal of this exercise is to create a simple TodoList component allowing the user to:
@@ -71,7 +69,8 @@ export default class Requirements extends Component {
                 </dl>
                 <h3>Implementation details</h3>
                 Use the provided <code>todo.service.js</code> as a backend
-                service for load/add/remove operations
+                service for load/add/remove operations.
+                See JS Docs on <a href="https://github.com/cikasfm/react-todolist-starter/blob/main/docs/todo.service.md">github</a>
               </div>
             ) : null}
           </div>
